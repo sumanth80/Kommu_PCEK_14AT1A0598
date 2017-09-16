@@ -39,6 +39,10 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getStudent(int index) {
+		if(index<0 || index>=students.length)
+		{
+			throw new IllegalArgumentException("Error");
+		}
 		return null;
 	}
 
