@@ -147,14 +147,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeToIndex(int index) {
-		Student[] abc=new Student[index];
-		for(int i=0;i<index;i++)
-		{
-			abc[i]=students[i];
-		}
-		students=new Student[abc.length];
-		for(int i=0;i<abc.length;i++)
-			student[i]=abc[i];
+		
 	}
 
 	@Override
