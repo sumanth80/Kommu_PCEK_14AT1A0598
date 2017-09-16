@@ -33,17 +33,12 @@ public class StudentGroup implements StudentArrayOperation {
 	public void setStudents(Student[] students) {
 		if(students==null)
 		{
-			    throw new IllegalArgumentException();	
+			throw new IllegalArgumentException();	
 		}
-		return null;
 	}
 
 	@Override
 	public Student getStudent(int index) {
-		if(index<0 || index>=students.length)
-		{
-			throw new IllegalArgumentException();
-		}
 		return null;
 	}
 
