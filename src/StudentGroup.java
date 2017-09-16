@@ -58,7 +58,21 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void addFirst(Student student) {
-		// Add your implementation here
+		if(student==null)
+			throw new IllegalArgumentException("Error");
+		else
+		{   
+			Student[] abc=new Student[students.length+1];
+			abc[0]=student;
+			for(int i=1;i<students.length;i++)
+				abc[i]=students[i-1];
+			students=new Student[abc.length];
+			for(int i=0;i<abc.length;i++)
+				students[i]=abc[i];
+					
+			
+			
+		}
 	}
 
 	@Override
