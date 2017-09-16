@@ -132,32 +132,124 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void remove(Student student) {
-		// Add your implementation here
+		Student x; boolean flag=false; int j;
+		if(student==null)
+			throw new IllegalArgumentException("Error");
+		else
+		{   
+			for(int i=0;i<students.length;i++)
+			{
+				if(students[i]==student)
+				{
+					flag=true;
+					j=i;
+					break;
+				}
+			}
+			if(flag==true)
+			{int index=j;
+				Student[] abc=new Student[students.length-1];
+				for(int i=0;i<index;i++)
+					abc[i]=students[i];
+				
+				for(int i=index;i<students.length-1;i++)
+					abc[i]=students[i+1];
+				students=new Student[abc.length];
+				for(int i=0;i<abc.length;i++)
+					students[i]=abc[i];
+			}
+			else
+			{
+				throw new IllegalArgumentException("Student not exist");
+			}
+		}
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
-		// Add your implementation here
+		if( index<0 || index>=students.length)
+			throw new IllegalArgumentException("Error");
+		else
+		{   
+			Student[] abc=Student[index+1];
+			for(int i=0;i<=index;i++)
+				abc[i]=students[i];
+			students=new Student[abc.length];
+			for(int i=0;i<abc.length;i++)
+				students[i]=abc[i];
+			
+		}
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
-		// Add your implementation here
+		if(student==null)
+			throw new IllegalArgumentException("Error");
+		else
+		{   
+			Student[] abc=new Student[students.length+1];
+			int j;
+			for(int i=0;i<students.length;i++)
+			{
+				if(students[i]==student)
+				{
+					j=i;
+					break;
+				}
+			}
+			Student[] abc=new Student[j+1];
+			for(int i=0;i<=j;i++)
+				students[i]=abc[i];			
+		}
 	}
 
 	@Override
 	public void removeToIndex(int index) {
-		// Add your implementation here
+		Student[] abc=new Student[index];
+		for(int i=0;i<index;i++)
+		{
+			abc[i]=students[i];
+		}
+		students=new Student[abc.length];
+		for(int i=0;i<abc.length;i++)
+			student[i]=abc[i];
 	}
 
 	@Override
 	public void removeToElement(Student student) {
-		// Add your implementation here
+		int j;
+		for(int i=0;i<students.length;i++)
+		{
+			if(students[i]==student)
+			{
+				j=i;
+				break;
+			}
+		}
+		Student[] abc=new Student[j];
+		for(int i=0;i<j;i++)
+			abc[i]=student[i];
+		Student[] students=new Student[abc.length];
+		for(int i=0;i<abc.length;i++)
+			students[i]=abc[i];
 	}
 
 	@Override
 	public void bubbleSort() {
-		// Add your implementation here
+		int c,d,n=students.length;
+		Student swap;
+		for (c = 0 ; c < ( n - 1 ); c++)
+		  {
+		    for (d = 0 ; d < n - c - 1; d++)
+		    {
+		      if (students[d] > students[d+1]) /* For decreasing order use < */
+		      {
+		        swap       = students[d];
+		        students[d]   = students[d+1];
+		        students[d+1] = swap;
+		      }
+		    }
+		  }
 	}
 
 	@Override
