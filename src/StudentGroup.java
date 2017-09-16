@@ -34,7 +34,7 @@ public class StudentGroup implements StudentArrayOperation {
 		if(students==null)
 		{
 			
-			    throw new IllegalArgumentException();
+			    throw new IllegalArgumentException("Error");
 			
 		}
 	}
