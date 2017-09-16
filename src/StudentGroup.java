@@ -11,7 +11,7 @@ import java.util.Date;
  * DO NOT PUT any classes into packages
  *
  */
-public class StudentGroup implements StudentArrayOperation throws IllegalArgumentException{
+public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
 	
@@ -35,6 +35,7 @@ public class StudentGroup implements StudentArrayOperation throws IllegalArgumen
 		{
 			    throw new IllegalArgumentException();	
 		}
+		return null;
 	}
 
 	@Override
@@ -43,6 +44,7 @@ public class StudentGroup implements StudentArrayOperation throws IllegalArgumen
 		{
 			throw new IllegalArgumentException();
 		}
+		return null;
 	}
 
 	@Override
