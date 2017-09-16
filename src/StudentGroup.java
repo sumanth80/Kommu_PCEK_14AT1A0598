@@ -147,7 +147,14 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeToIndex(int index) {
-		
+		Student[] abc=new Student[index];
+		for(int i=0;i<index;i++)
+		{
+			abc[i]=students[i];
+		}
+		students=new Student[abc.length];
+		for(int i=0;i<abc.length;i++)
+			student[i]=abc[i];
 	}
 
 	@Override
@@ -157,20 +164,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void bubbleSort() {
-		int c,d,n=students.length;
-		Student swap;
-		for (c = 0 ; c < ( n - 1 ); c++)
-		  {
-		    for (d = 0 ; d < n - c - 1; d++)
-		    {
-		      if (students[d] > students[d+1]) /* For decreasing order use < */
-		      {
-		        swap       = students[d];
-		        students[d]   = students[d+1];
-		        students[d+1] = swap;
-		      }
-		    }
-		  }
+		
 	}
 
 	@Override
